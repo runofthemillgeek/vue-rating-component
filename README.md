@@ -1,18 +1,5 @@
-# customform
+# Custom Rating Component using Vue.js
 
-> A Vue.js project
+This is a custom rating component which supports two-way data-binding built using Vue.js. The animations are powered by CSS. Currently only supports rating from 1–5. You can have a different character from the default star for selected and unselected modes by passing in values for props `selected-char` and `unselected-char`. The component is located in `rating.vue`.
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+This was just a fun thing I whipped up learning Vue.js. Feel free to remix this.
