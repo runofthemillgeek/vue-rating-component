@@ -3,6 +3,7 @@
     <div class="row mt-5">
       <div class="col-12">
         <h1 class="heading">Rating Component</h1>
+        <img src="../assets/logo.png" alt="test">
       </div>
       <div class="col-12 mt-3">
         <form>

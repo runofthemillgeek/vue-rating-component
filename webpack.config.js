@@ -1,11 +1,12 @@
 var path = require('path')
 var webpack = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './docs'),
-    publicPath: '/docs/',
+    publicPath: '/',
     filename: 'build.js'
   },
   module: {
@@ -34,7 +35,9 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]?[hash]'
+          outputPath: 'static/',
+          publicPath: 'static/',
+          name: '[name].[ext]'
         }
       }
     ]
@@ -73,6 +76,10 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Vue Template',
+      template: 'index.html'
     })
   ])
 }
