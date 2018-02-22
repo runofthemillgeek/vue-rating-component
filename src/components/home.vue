@@ -3,7 +3,6 @@
     <div class="row mt-5">
       <div class="col-12">
         <h1 class="heading">Rating Component</h1>
-        <img src="../assets/logo.png" alt="test">
       </div>
       <div class="col-12 mt-3">
         <form>
@@ -20,9 +19,14 @@
             </div>
           </div>
         </form>
-        <p v-if="name.length > 0">{{ (name) | propercase }} gave a rating of {{ rating }} stars!</p>
+        <p class="mt-5" v-if="name.length > 0">{{ (name) | propercase }} gave a rating of {{ rating }} stars!</p>
       </div>
     </div>
+    <footer class="row mt-5">
+      <div class="col-12 text-secondary">
+        <span>Made with 💖 by Sangeeth</span>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -36,7 +40,7 @@
   }
 
   p {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 </style>
 
@@ -50,7 +54,7 @@ export default {
 
   data() {
     return {
-      name: '',
+      name: 'John Doe',
       rating: 0,
     }
   },
